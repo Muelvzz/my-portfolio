@@ -192,6 +192,8 @@ section {
 .title {
     font-size: 3rem;
     text-align: center;
+    color: #000;
+    font-weight: bold;
 }
 
 #socials-container {
@@ -252,21 +254,83 @@ section {
     gap: 1rem;
 }
 
+/* ABOUT SECTIONS */
+#about {
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers, .about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+    width: 400px;
+    height: 400px;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
 /* PROJECTS SECTIONS */
+
 .container {
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(#ECEFFE, #CED6FB);
+    border-radius: 15px;
 }
 
 .card-wrapper {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 68px 35px;
     padding: 20px 10px;
     overflow: hidden;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
 }
+
+.card-list.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card-item.swiper-slide {
+  flex-shrink: 0;
+}
+
 
 .card-list .card-item {
     list-style: none;
@@ -282,6 +346,10 @@ section {
     border: 2px solid transparent;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
     transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
 }
 
 .card-list .card-item .card-link:hover {
@@ -328,4 +396,31 @@ section {
 .card-list .card-link:hover .card-button {
     color: #fff;
     background: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-button-prev,
+.card-wrapper .swiper-button-next {
+  color: #5372F0;
+  margin-top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
 }
