@@ -346,7 +346,6 @@ article .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#ECEFFE, #CED6FB);
     border-radius: 15px;
 }
 
