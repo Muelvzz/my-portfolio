@@ -2,6 +2,7 @@ async function loadHTML(getId, getFile) {
   const response = await fetch(getFile)
   const text = await response.text()
   document.getElementById(getId).innerHTML = text
+
 }
 
 loadHTML("nav", String.raw`template\nav.html`)
