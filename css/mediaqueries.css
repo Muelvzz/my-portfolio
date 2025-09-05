@@ -52,6 +52,11 @@
         height: fit-content;
         margin-bottom: 2rem;
     }
+    .about-pic{
+        border-radius: 1rem;
+        width: 250px;
+        height: 250px;
+    }
     .about-containers, .contact-info-upper-container, .btn-container {
         flex-wrap: wrap;
     }
